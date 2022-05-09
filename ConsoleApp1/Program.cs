@@ -37,7 +37,7 @@ while (indice < 22)
         maiorAltura = altura;
         nomeMaiorAltura = nome;
     }
-    if(nome.Lenght )
+    if(nome.Lenghts )
 
     indice = indice + 1;
 }
