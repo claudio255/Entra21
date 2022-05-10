@@ -1,9 +1,11 @@
-﻿int indice = 0; string maiorNome = ""; int idade = 0; double menorPeso = 0; string sexo = ""; double maiorAltura = 0; int sexoM = 0;
-int sexoF = 0; int quantidadeGols = 0; int menorQuantidadeCartoesAmarelos = 0; int menorQuantidadeCartoesVermelhos = 0;
+﻿int indice = 0; string maiorNome = ""; int idade = 0; double menorPeso = 0; string sexo = ""; double maiorAltura = 0; string sexoM = "";
+string sexoF = ""; int quantidadeGols = 0; int menorQuantidadeCartoesAmarelos = 0; int menorQuantidadeCartoesVermelhos = 0;
 string nomeMaiorPeso = ""; string nomeMenorPeso = ""; double maiorPeso = 0; double menorAltura = 0; string nomeMaiorAltura = "";
-string nomeMenorAltura = ""; string menorNome = "";
+string nomeMenorAltura = ""; string menorNome = ""; string nomeMenorCartoesAmarelos = ""; string nomeMaiorCartoesVermelhos = "";
+string nomeMaiorCartoesAmarelos = ""; string nomeMenorCartoesVermelhos = ""; int maiorQuantidadeCartoesVermelhos = 0;
+int maiorQuantidadeCartoesAmarelos = 0;
 
-while (indice < 22)
+while (indice < 4)
 {
     Console.WriteLine("Digite o nome do jogador: ");
     string nome = Console.ReadLine();
@@ -27,18 +29,63 @@ while (indice < 22)
         menorPeso = peso;
         nomeMenorPeso = nome;
     }
-    if(peso > maiorPeso)
-    {
-        maiorPeso = peso;
-        nomeMaiorPeso = nome;
-    }
     if(altura > maiorAltura)
     {
         maiorAltura = altura;
         nomeMaiorAltura = nome;
     }
-    if(nome.Lenghts )
+    if(nome.Length > maiorNome.Length)
+    {
+        maiorNome = nome;
+    }
+    if(sexo == "f")
+    {
+        sexoF = sexoF + 1;
+    }
+    if(sexo == "m")
+    {
+        sexoM = sexoM + 1;
+    }
+    if(quantidadeCartoesAmarelos < menorQuantidadeCartoesAmarelos)
+    {
+        menorQuantidadeCartoesAmarelos = quantidadeCartoesAmarelos;
+        nomeMenorCartoesAmarelos = nome;
+    }
+    if (nome.Length < menorNome.Length)
+    {
+        menorNome = nome;
+    }
+    if(peso > maiorPeso)
+    {
+        maiorPeso = peso;
+        nomeMaiorPeso = nome;
+    }
+    if(quantidadeCartoesVermelhos > maiorQuantidadeCartoesVermelhos)
+    {
+        maiorQuantidadeCartoesVermelhos = quantidadeCartoesVermelhos;
+        nomeMaiorCartoesVermelhos = nome;
+    }
+    if(quantidadeCartoesAmarelos > maiorQuantidadeCartoesAmarelos)
+    {
+        maiorQuantidadeCartoesAmarelos = quantidadeCartoesAmarelos;
+        nomeMaiorCartoesAmarelos = nome;
+    }
+    if(quantidadeCartoesVermelhos < menorQuantidadeCartoesVermelhos)
+    {
+        menorQuantidadeCartoesVermelhos = quantidadeCartoesVermelhos;
+        nomeMenorCartoesVermelhos = nome;
+    }
 
     indice = indice + 1;
 }
-Console.WriteLine("O jogador com menor peso é: " + nomeMenorPeso + " com um peso de: " + menorPeso);
+Console.WriteLine("O jogador com o menor peso é: " + nomeMenorPeso + " com um peso de: " + menorPeso);
+Console.WriteLine("O jogador com o maior peso é: " + nomeMaiorPeso + " com um pedo de: " + maiorPeso);
+Console.WriteLine("O jogador com a maior altura é: " + nomeMaiorAltura + " com uma altura de: " + maiorAltura);
+Console.WriteLine("O jogador com o maior nome é: " + maiorNome);
+Console.WriteLine("O jogador com o menor nome é: " + menorNome);
+Console.WriteLine("A quantidade de jogadores do sexo feminino é: " + sexoF);
+Console.WriteLine("A quantidade de jogadores do sexo masculino é " + sexoM);
+Console.WriteLine("O jogador com a menor quantidade de cartões amarelos é " + nomeMenorCartoesAmarelos + " com um total de: " + menorQuantidadeCartoesAmarelos + " cartões amarelos");
+Console.WriteLine("O jogador com a maior quantidade de cartões amarelos é " + nomeMaiorCartoesAmarelos + " com um total de: " + maiorQuantidadeCartoesAmarelos + " cartões amarelos");
+Console.WriteLine("O jogador com a menor quantidade de cartões vermelhos é " + nomeMenorCartoesVermelhos + " com um total de: " + menorQuantidadeCartoesVermelhos + " cartões vermelhos");
+Console.WriteLine("O jogador com a maior quantidade de cartões vermelhos é " + nomeMaiorCartoesVermelhos + " com um total de: " + maiorQuantidadeCartoesVermelhos + " cartões vermelhos");
