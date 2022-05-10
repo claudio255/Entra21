@@ -1,6 +1,6 @@
-﻿int indice = 0; string maiorNome = ""; int idade = 0; double menorPeso = 0; string sexo = ""; double maiorAltura = 0; string sexoM = "";
-string sexoF = ""; int quantidadeGols = 0; int menorQuantidadeCartoesAmarelos = 0; int menorQuantidadeCartoesVermelhos = 0;
-string nomeMaiorPeso = ""; string nomeMenorPeso = ""; double maiorPeso = 0; double menorAltura = 0; string nomeMaiorAltura = "";
+﻿int indice = 0; string maiorNome = ""; int idade = 0; double menorPeso = double.MaxValue; string sexo = ""; double maiorAltura = 0; string sexoM = "";
+string sexoF = ""; int quantidadeGols = 0; int menorQuantidadeCartoesAmarelos = int.MaxValue; int menorQuantidadeCartoesVermelhos = int.MaxValue;
+string nomeMaiorPeso = ""; string nomeMenorPeso = ""; double maiorPeso = 0; double menorAltura = double.MaxValue; string nomeMaiorAltura = "";
 string nomeMenorAltura = ""; string menorNome = ""; string nomeMenorCartoesAmarelos = ""; string nomeMaiorCartoesVermelhos = "";
 string nomeMaiorCartoesAmarelos = ""; string nomeMenorCartoesVermelhos = ""; int maiorQuantidadeCartoesVermelhos = 0;
 int maiorQuantidadeCartoesAmarelos = 0;
@@ -40,11 +40,11 @@ while(indice < 4)
     }
     if(sexo == "f")
     {
-        sexoF = sexoF + 1;
+        sexoF = (sexoF + 1);
     }
     if(sexo == "m")
     {
-        sexoM = sexoM + 1;
+        sexoM = (sexoM + 1);
     }
     if(quantidadeCartoesAmarelos < menorQuantidadeCartoesAmarelos)
     {
