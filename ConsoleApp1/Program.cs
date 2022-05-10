@@ -40,11 +40,11 @@ while(indice < 4)
     }
     if(sexo == "f")
     {
-        sexoF = (sexoF + 1);
+        sexoF = sexoF + 1;
     }
     if(sexo == "m")
     {
-        sexoM = (sexoM + 1);
+        sexoM = sexoM + 1;
     }
     if(quantidadeCartoesAmarelos < menorQuantidadeCartoesAmarelos)
     {
