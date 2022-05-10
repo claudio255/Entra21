@@ -5,7 +5,7 @@ string nomeMenorAltura = ""; string menorNome = ""; string nomeMenorCartoesAmare
 string nomeMaiorCartoesAmarelos = ""; string nomeMenorCartoesVermelhos = ""; int maiorQuantidadeCartoesVermelhos = 0;
 int maiorQuantidadeCartoesAmarelos = 0;
 
-while (indice < 4)
+while(indice < 4)
 {
     Console.WriteLine("Digite o nome do jogador: ");
     string nome = Console.ReadLine();
